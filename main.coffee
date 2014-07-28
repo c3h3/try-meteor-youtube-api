@@ -7,6 +7,9 @@ Router.map ->
 	@route "index",
 		path: "/"
 		template: "index"
+		data: ->
+			meteorIsGreat: "Meteor is great!"
+
 
 
 if Meteor.isClient
@@ -15,8 +18,7 @@ if Meteor.isClient
 	
 
 	Meteor.startup ->
-		$("#meteorIsGreat").html "Meteor is great!"
-
+		
 		Meteor.call "getMeteorIsSoNice", "c3h3", (error,result) ->
 			if error
 				alert error
