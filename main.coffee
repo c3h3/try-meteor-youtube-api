@@ -1,20 +1,8 @@
 
-Router.configure
-	layoutTemplate: 'main'
-
-
-Router.map -> 
-	@route "index",
-		path: "/"
-		template: "index"
-		data: ->
-			meteorIsGreat: "Meteor is great!"
-
-
-
 if Meteor.isClient
 	Template.index.helpers
 		helloMeteor: "Hello, Youtube APIs!"
+		meteorIsGreat: "Meteor is great!"
 	
 
 	Meteor.startup ->
